@@ -1,9 +1,10 @@
 
 // PAINT ALL ONE COLOR
 state = Calc.getState()
+color = "#C0BC20";
 var item;
 for (item = 0; item < state["expressions"]["list"].length; item++) {
-  state["expressions"]["list"][item].color = "#C0BC20"
+  state["expressions"]["list"][item].color = color;
   //console.log(item);
 }
 Calc.setState(state)

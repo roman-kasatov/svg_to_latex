@@ -9,7 +9,7 @@ filename = 'nkshkn.svg'
 precision = 4 # decimal places
 path_seg_partition = 3 # 2 or more
 types = ['line', 'circle', 'ellipse']
-#types = []
+#types = ['line', 'circle', 'ellipse', 'rect']
 colors = {'red' : '#FEFEFE', 'black' : '#000000'}
 
 res_forms = open('result.txt', 'w')

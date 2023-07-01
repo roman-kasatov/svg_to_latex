@@ -32,3 +32,10 @@ Paints with same colors that in `.svg` file. May need to add some alias-named co
 
 #### RAINBOW COLORING
 Colors formulas consistently with changing hue in hsla format
+
+### Example
+original svg picture / output of the script drawn using desmos
+<p>
+  <img src="pictures/original.PNG" width="40%"/>
+  <img src="pictures/result.PNG" width="40%"/>
+</p>

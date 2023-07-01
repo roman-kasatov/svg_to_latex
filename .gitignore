@@ -1,4 +1,5 @@
 *.svg
 *.txt
 *.cdr
+local/
 __pycache__/

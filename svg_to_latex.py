@@ -5,7 +5,7 @@ from tqdm import tqdm # Progress bar
 
 from coloring_script import * # Browser console script
 
-filename = 'nkshkn.svg'
+filename = 'pic.svg'
 precision = 4 # decimal places
 path_seg_partition = 3 # 2 or more
 types = ['line', 'circle', 'ellipse']
@@ -31,6 +31,7 @@ def main():
 	print("Parsing paths...")
 	paths = doc.getElementsByTagName('path')
 	pbar = tqdm(total=paths.length, desc="paths processing", ascii="*█")
+
 	for svg_path in paths:
 		proceed_path(svg_path)
 		pbar.update(1)
@@ -41,6 +42,7 @@ def main():
 
 def proceed_path(svg_path):
 	path = [x.value for x in svg_path.attributes.values()][-1]
+	path = svg_path.attributes['d'].value
 	path_parsed = parse_path(path)
 	for seg_nmb in tqdm(range(len(path_parsed)), desc="path", ascii="*█", leave=True):
 		seg = path_parsed[seg_nmb]
